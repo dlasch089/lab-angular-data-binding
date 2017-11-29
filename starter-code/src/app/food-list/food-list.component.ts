@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import foods from '../foods';
+import foodList from '../foods';
 
 
 // Good practice to specify the imported data - normally in a models-file:
@@ -18,7 +18,7 @@ import foods from '../foods';
 })
 
 export class FoodListComponent implements OnInit {
-  foods = foods;
+  foods = foodList;
   newFood: Object = {}; // empty object
   terms: String = null;
   displayForm: Boolean = true;
@@ -28,6 +28,7 @@ export class FoodListComponent implements OnInit {
   constructor() { }
 
   ngOnInit() { // before everything is loaded, we do this
+    this.foods = foodList;
   }
 
   // Good practice: Always call functions used in the frontend handleShowForm etc.

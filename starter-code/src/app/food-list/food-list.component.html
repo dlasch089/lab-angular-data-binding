@@ -35,7 +35,7 @@
 
 
 <ul [ngClass]="{ foodlist: displayList }">
-  <li *ngFor="let food of (foods | filterItems:terms), let i = index">
+  <li *ngFor="let food of (foods | filterItems:terms)">
     {{food.name}} // 
     Calories: <span> {{food.calories}}</span>
     <input type="number" name="dailyQty" placeholder="quantity of food">    
